@@ -1,5 +1,4 @@
 
-/** Concrete Builder */
 public class SmallHouseBuilder extends Builder {
 
 	@Override

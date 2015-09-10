@@ -1,5 +1,4 @@
 
-/** Director */
 public class Architect {
 
 	private Builder builder;

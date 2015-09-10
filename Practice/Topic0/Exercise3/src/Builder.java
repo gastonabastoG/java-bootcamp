@@ -9,7 +9,7 @@ public abstract class Builder {
 	}
 
 	public void buildNewHospital() {
-		hospital = new Hospital();
+		hospital = new Hospital(200,5,"Concrete");
 	}
 
 	public abstract void buildArea();
