@@ -1,3 +1,4 @@
+package com.mfidececchi.topic2;
 
 public class Program {
 
@@ -37,12 +38,12 @@ public class Program {
 		ShoppingCartController userControl3 = new ShoppingCartController();
 		// cash purchase
 		// select id item and quantity
-		userControl2.selectItem(3, 2);
-		userControl2.selectItem(4, 5);
+		userControl3.selectItem(3, 2);
+		userControl3.selectItem(4, 5);
 		// set cash as payment type
-		userControl2.setPaymentType(new Cash());
+		userControl3.setPaymentType(new Cash());
 		// finish purchase
-		userControl2.checkout();
+		userControl3.checkout();
 
 		TransactionManager.getInstance().printTransactions();
 	}

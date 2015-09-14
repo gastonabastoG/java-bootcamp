@@ -1,3 +1,4 @@
+package com.mfidececchi.topic2;
 import java.util.ArrayList;
 
 public class Stock {

@@ -1,3 +1,4 @@
+package com.mfidececchi.topic2;
 import java.util.ArrayList;
 
 public class TransactionManager {
@@ -28,7 +29,7 @@ public class TransactionManager {
 		System.out.println("Transaction number // Time // Payment type // Total");
 		for (Transaction t : transactions) {
 			System.out.println(+t.getNumberTransaction() + " // " + t.getTimeTransaction() + " // "
-					+ t.getPaymentType().getClass().getName() + " // $" + t.getTotal());
+					+ t.getPaymentType().toString() + " // $" + t.getTotal());
 		}
 	}
 }
