@@ -37,7 +37,7 @@ exercises**
 
     * [Topic 0: Introduction to Object Oriented Programming Concepts (OOP)](#topic-0-introduction-to-object-oriented-programming-concepts-1-day)
 
-    * [Topic 1: Design Patterns](#topic-1-design-patterns-3-days)
+    * [Topic 1: Design Patterns](#topic-1-design-patterns-2-days)
 
     * [Topic 2: Maven](#topic-2-maven-1-day)
 
@@ -49,9 +49,9 @@ exercises**
 
     * [Topic 6: Spring Core & REST](#topic-6-spring-core--rest-3-day)
 
-    * [Topic 7: Hibernate](#topic-7-orm-1-day)
+    * [Topic 7: ORM](#topic-7-orm-1-day)
   
-    * [Topic 8: Spring Data & MongoDB](#topic-8-spring-data--mongodb-2-day)
+    * [Extra Topic: Spring Data & MongoDB](#extra-topic-spring-data--mongodb-2-day)
 
 10. [Your First Project Starts Now!](#your-first-project-starts-now)
 
@@ -202,7 +202,7 @@ Commit your practice code.
 → [index](#index)
 
 
-####Topic 1: Design Patterns (3 days)####
+####Topic 1: Design Patterns (2 days)####
 
 #####Reading:#####
 1. [Design Patterns CD](http://www.saeedsh.com/resources/Design%20Patterns.pdf)
@@ -258,7 +258,7 @@ Commit your practice code.
 
 #####Key Points:#####
 
-1, 2, 3, 4, 5, 6, 7
+1, 2, 3, 4
 
 #####Commit:#####
 
@@ -383,7 +383,7 @@ Note 2: Do not implement JPA or ORM. Services should return in memory data only.
 
 #####Key Points:#####
 
-2,4,7
+1,2,4,7
 
 #####Commit:#####
 
@@ -509,7 +509,7 @@ Commit your practice code.
 
 → [index](#index)
 
-####Topic 8: Spring Data & MongoDB (2 day)####
+####Extra Topic: Spring Data & MongoDB (2 day)####
 
 #####Reading:#####
 1. [SQL to MongoDB Mapping Chart](http://docs.mongodb.org/manual/reference/sql-comparison)
