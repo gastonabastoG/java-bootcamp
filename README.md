@@ -35,7 +35,7 @@ exercises**
 
 9. [Learning Days](#learning-days)
 
-    * [Topic 0: Introduction to Object Oriented Programming Concepts (OOP)](#topic-0-introduction-to-object-oriented-programming-concepts-1-day-oop)
+    * [Topic 0: Introduction to Object Oriented Programming Concepts (OOP)](#topic-0-introduction-to-object-oriented-programming-concepts-1-day)
 
     * [Topic 1: Design Patterns](#topic-1-design-patterns-2-days)
 
