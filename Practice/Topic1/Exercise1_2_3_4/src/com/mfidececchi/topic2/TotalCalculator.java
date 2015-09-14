@@ -1,4 +1,5 @@
 package com.mfidececchi.topic2;
+
 import java.util.ArrayList;
 
 import com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler;
@@ -30,63 +31,72 @@ public class TotalCalculator {
 
 		double discount = 0;
 
-		// calculate discount depending on payment type
-		switch (paymentType.getClass().getName()) {
-
-		case "CreditCard": {
+		try {
+			CreditCard cast = (CreditCard) paymentType;
 			// 10% discount by Credit Card.
 			discount = subTotal * 1 / discountRateCreditCard;
 			System.out.println("SubTotal: " + subTotal + " Discount by CreditCard: " + discount);
-			break;
-		}
-		case "Paypal": {
-			// "The cheapest item is for free when the user pay by Paypal" is
-			// replaced by
-			// "The cheapest Payline is for free when the user pay by Paypal"
-			// because I made exercise allowing that user can buy several Items
-			// on the same PaymentLine.
+		} catch (Exception e1) {
 
-			// find cheapest PaymentLine
-			PaymentLine cheapestLine = null;
-			for (PaymentLine line : shoppingCart) {
-				if (cheapestLine == null) {
-					cheapestLine = line;
-				} else {
-					if (line.getTotal() < cheapestLine.getTotal()) {
+			try {
+				Paypal cast = (Paypal) paymentType;
+				// "The cheapest item is for free when the user pay by Paypal"
+				// is
+				// replaced by
+				// "The cheapest Payline is for free when the user pay by
+				// Paypal"
+				// because I made exercise allowing that user can buy several
+				// Items
+				// on the same PaymentLine.
+
+				// find cheapest PaymentLine
+				PaymentLine cheapestLine = null;
+				for (PaymentLine line : shoppingCart) {
+					if (cheapestLine == null) {
 						cheapestLine = line;
+					} else {
+						if (line.getTotal() < cheapestLine.getTotal()) {
+							cheapestLine = line;
+						}
 					}
 				}
-			}
-			discount = cheapestLine.getTotal();
-			System.out.println("SubTotal: " + subTotal + " Discount by Paypal: " + discount);
-			break;
+				discount = cheapestLine.getTotal();
+				System.out.println("SubTotal: " + subTotal + " Discount by Paypal: " + discount);
+			} catch (Exception e2) {
 
-		}
+				try {
 
-		case "Cash": {
-			// "90% of the most expensive item is free if the user pays by
-			// Cash." is
-			// replaced by
-			// "90% of the most expensive PaymentLine is free if the user pays
-			// by Cash."
-			// because I made exercise allowing that user can buy several Items
-			// on the same PaymentLine.
+					Cash cast = (Cash) paymentType;
 
-			// find most expensive PaymentLine
-			PaymentLine expensiveLine = null;
-			for (PaymentLine line : shoppingCart) {
-				if (expensiveLine == null) {
-					expensiveLine = line;
-				} else {
-					if (line.getTotal() > expensiveLine.getTotal()) {
-						expensiveLine = line;
+					// "90% of the most expensive item is free if the user pays
+					// by
+					// Cash." is
+					// replaced by
+					// "90% of the most expensive PaymentLine is free if the
+					// user pays
+					// by Cash."
+					// because I made exercise allowing that user can buy
+					// several Items
+					// on the same PaymentLine.
+
+					// find most expensive PaymentLine
+					PaymentLine expensiveLine = null;
+					for (PaymentLine line : shoppingCart) {
+						if (expensiveLine == null) {
+							expensiveLine = line;
+						} else {
+							if (line.getTotal() > expensiveLine.getTotal()) {
+								expensiveLine = line;
+							}
+						}
 					}
+					discount = expensiveLine.getTotal();
+					System.out.println("SubTotal: " + subTotal + " Discount by Cash: " + discount);
+				} catch (Exception e3) {
+
 				}
+
 			}
-			discount = expensiveLine.getTotal();
-			System.out.println("SubTotal: " + subTotal + " Discount by Cash: " + discount);
-			break;
-		}
 		}
 		return discount;
 	}
