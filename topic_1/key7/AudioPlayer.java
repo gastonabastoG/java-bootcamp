@@ -1,0 +1,64 @@
+package topic_1.key7;
+
+import java.util.List;
+
+
+/**
+ * @author Guille
+ * adapter class
+ */
+public class AudioPlayer  extends MediaAdaptee implements MediaPlayer {
+	
+    private final MediaAdaptee adapter;
+    private List<Track> reproductionList;
+    private Track actualTrack;
+
+    public AudioPlayer(){
+            adapter=new MediaAdaptee();
+    }
+
+
+    @Override
+    public void pause() {
+            adapter.pause();
+    }
+
+    @Override
+    public  void play() {
+            adapter.play();
+    }
+
+    @Override
+    public  void stop() {
+            adapter.stop();
+    }
+
+    @Override
+    public void backward() {
+        adapter.backward();
+    }
+
+    @Override
+    public void forward() {
+        adapter.forward();
+    }
+	  
+        
+    public List<Track> getReproductionList() {
+            return reproductionList;
+    }
+
+    public void setReproductionList(List<Track> reproductionList) {
+            this.reproductionList = reproductionList;
+    }
+
+    public Track getActualTrack() {
+            return actualTrack;
+    }
+
+    public void setActualTrack(Track actualTrack) {
+            this.actualTrack = actualTrack;
+    }
+
+
+}
