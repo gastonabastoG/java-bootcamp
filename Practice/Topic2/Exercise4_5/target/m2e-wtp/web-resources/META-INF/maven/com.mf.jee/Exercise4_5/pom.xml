@@ -27,6 +27,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>Exercise4</finalName>
+		<finalName>Exercise4_5</finalName>
 	</build>
 </project>
