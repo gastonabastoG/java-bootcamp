@@ -1,8 +1,5 @@
-package com.mfidececchi.topic2;
-
+package com.mfidececchi.topic1;
 import java.util.ArrayList;
-
-import com.sun.org.apache.xerces.internal.impl.xs.SubstitutionGroupHandler;
 
 public class TotalCalculator {
 

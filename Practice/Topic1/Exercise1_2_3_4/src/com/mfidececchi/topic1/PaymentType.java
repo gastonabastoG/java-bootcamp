@@ -1,4 +1,4 @@
-package com.mfidececchi.topic2;
+package com.mfidececchi.topic1;
 
 /** Abstract Class */
 public abstract class PaymentType {
