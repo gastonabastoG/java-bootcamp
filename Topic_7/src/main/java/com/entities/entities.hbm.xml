@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.entities.Student" table="Student">
+        <id name="registrationNumber" type="int">
+            <column name="REGISTRATIONNUMBER" />
+            <generator class="assigned" />
+        </id>
+		<property name="firstName" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+		<property name="lastName" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="birthdate" type="java.sql.Date">
+            <column name="BIRTHDATE" />
+        </property>
+    </class>
+	<class name="com.entities.Teacher" table="Teacher">
+        <id name="idTeacher" type="int">
+            <column name="idTEACHER" />
+            <generator class="assigned" />
+        </id>
+		<property name="firstName" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+		<property name="lastName" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="birthdate" type="java.sql.Date">
+            <column name="BIRTHDATE" />
+        </property>
+    </class>
+	<class name="com.entities.Course" table="Course">
+        <id name="idCourse" type="int">
+            <column name="idCOURSE" />
+            <generator class="assigned" />
+        </id>
+		<property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+		<property name="assignedTeacher" type="int">
+            <column name="ASSIGNEDTEACHER" />
+        </property>
+		<property name="hoursByWeek" type="int">
+            <column name="HOURSBYWEEK" />
+        </property>
+        <property name="startTime" type="java.sql.Date">
+            <column name="STARTTIME" />
+        </property>
+		<property name="endTime" type="java.sql.Date">
+            <column name="ENDTIME" />
+        </property>
+    </class>
+	<class name="com.entities.Registrations" table="Registrations">
+        <composite-id> 
+			<key-property name="registrationNumber" type="int" column="REGISTRATIONNUMBER" />
+			<key-property name="idCourse" type="int" column="idCOURSE" />
+			<key-property name="registrationYear" type="int" column="REGISTRATIONYEAR" />
+        </composite-id>
+        <property name="note1" type="int">
+            <column name="NOTE1" />
+        </property>
+		<property name="note2" type="int">
+            <column name="NOTE2" />
+        </property>
+		<property name="note3" type="int">
+            <column name="NOTE3" />
+        </property>
+		<property name="finalNote" type="int">
+            <column name="FINALNOTE" />
+        </property>
+    </class>
+</hibernate-mapping>
