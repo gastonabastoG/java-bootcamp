@@ -36,7 +36,7 @@ public class UserMySQLImp implements UserDAO{
 	
 	@Override
 	public User getUser(String nickName) {
-		Query oQuery  = (Query)  entityManager.createQuery("SELECT u  from users u where  (u.nickname = '"+ nickName + "') ");
+		Query oQuery  = (Query)  entityManager.createQuery("SELECT u FROM User u WHERE  (u.nickName = '"+ nickName + "') ");
 				
 		User queryResult =  (User) oQuery.getSingleResult();
 		return queryResult;

@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>guille-bootcamp</groupId>
-	<artifactId>TPFinal</artifactId>
+	<artifactId>FinalProject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Topic7</name>
+	<name>FinalProject</name>
 	<description></description>
-
+ 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -79,6 +79,13 @@
 		   <artifactId>commons-dbcp</artifactId>
 		  
 		 </dependency>
+		 
+		   <!-- MySQL database driver -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.9</version>
+	</dependency>
 	</dependencies>
 
 	<build>

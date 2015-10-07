@@ -6,7 +6,7 @@
 	<class name="com.entities.User" table="USERS">
         <composite-id> 
 			<key-property name="id" type="int" column="IDUSER" />
-			<key-property name="nickname" type="java.lang.String" column="NICKNAME" />
+			<key-property name="nickName" type="java.lang.String" column="NICKNAME" />
         </composite-id>
         <property name="password" type="java.lang.String">
             <column name="PASSWORD" />

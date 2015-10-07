@@ -66,7 +66,7 @@ CREATE TABLE `shoppingcartentry` (
 #
 
 CREATE TABLE `users` (
-  `IDUSERS` int(11) NOT NULL auto_increment,
+  `IDUSER` int(11) NOT NULL auto_increment,
   `NICKNAME` varchar(20) NOT NULL,
   `PASSWORD` varchar(20) NOT NULL,
   PRIMARY KEY  (`IDUSERS`)

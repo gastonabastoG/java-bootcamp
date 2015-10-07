@@ -12,6 +12,9 @@ import com.services.UserServiceImpl;
 public class Application {
 
     public static void main(String[] args) {
+    	
+    	
+    	
     	ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 
 	    UserServiceImpl userManager = (UserServiceImpl) ctx.getBean("userServiceImpl");
